@@ -1,0 +1,44 @@
+{
+	"user": "dakyskye",
+	"repo": "pawn-env",
+	"entry": "tests/tests.pwn",
+	"output": "gamemodes/tests.amx",
+	"local": true,
+	"dependencies": [
+		"sampctl/samp-stdlib"
+	],
+	"dev_dependencies": [
+		"pawn-lang/YSI-Includes@5.x"
+	],
+	"builds": [
+		{
+			"name": "main",
+			"args": [
+				"-d2",
+				"-E+",
+				"-Z+"
+			]
+		}
+	],
+	"runtime": {
+		"rcon_password": "|%GuRd324$u0026",
+		"port": 7777,
+		"plugins": [
+			"env"
+		],
+		"hostname": "pawn-env test",
+		"mode": "y_testing"
+	},
+	"resources": [
+		{
+			"name": "env.so",
+			"archive": false,
+			"platform": "linux"
+		},
+		{
+			"name": "env.dll",
+			"archive": true,
+			"platform": "windows"
+		}
+	]
+}
