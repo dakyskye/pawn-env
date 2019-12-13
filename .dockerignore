@@ -1,0 +1,8 @@
+target/
+tests/
+.cargo-ok
+.gitattributes
+.gitignore
+pawn.json
+env.inc
+README.md
