@@ -69,7 +69,7 @@ native bool:Env_Get(const env[], dest[], size=sizeof(dest));
 
 It checks if an environment variable with passed name as `env` exists or not and returns the result as `true` or `false`, hence the `bool` tag.
 
-* `bool:Env_get(const env[], dest[], size=sizeof(dest));`
+* `bool:Env_Get(const env[], dest[], size=sizeof(dest));`
 
 It reads the value of the environment variable of passed name as `env`, then packs it into `dest`.
 
