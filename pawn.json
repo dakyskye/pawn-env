@@ -37,7 +37,7 @@
 		},
 		{
 			"name": "env.dll",
-			"archive": true,
+			"archive": false,
 			"platform": "windows"
 		}
 	]
