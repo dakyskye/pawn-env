@@ -12,3 +12,4 @@ crate-type = ["cdylib"]
 samp = {git="https://github.com/ZOTTCE/samp-rs/",branch="async-amx",features = ["async"]}
 log = "0.4.6"
 fern = "0.5.7"
+dotenv = "0.15.0"
