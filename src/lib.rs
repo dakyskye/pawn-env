@@ -3,6 +3,7 @@ mod plugin;
 
 use crate::plugin::PawnEnv;
 use samp::initialize_plugin;
+use dotenv;
 
 initialize_plugin!(
 	natives: [
@@ -11,6 +12,7 @@ initialize_plugin!(
 	],
 	{
 		samp::plugin::enable_process_tick();
+		dotenv::dotenv().ok();
 		let samp_logger = samp::plugin::logger()
 			.level(log::LevelFilter::Info);
 
