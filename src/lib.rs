@@ -16,17 +16,14 @@ initialize_plugin!(
 		dotenv().ok();
 
 		samp::plugin::enable_process_tick();
-		let samp_logger = samp::plugin::logger()
-			.level(log::LevelFilter::Info);
+		let samp_logger = samp::plugin::logger().level(log::LevelFilter::Info);
 
-		let _ = fern::Dispatch::new()
-			.format(|callback, message, record| {
-				callback.finish(format_args!("[pawn-env] [{}]: {}", record.level().to_string().to_lowercase(), message))
-			})
-			.chain(samp_logger)
-			.apply();
+		let _ = fern::Dispatch::new().format(|callback, message, record| {
+			callback.finish(format_args!("[pawn-env] [{}]: {}", record.level().to_string().to_lowercase(), message))
+		})
+		.chain(samp_logger)
+		.apply();
 
-		PawnEnv {
-		}
+		PawnEnv {}
 	}
 );

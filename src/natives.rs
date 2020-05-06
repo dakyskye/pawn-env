@@ -18,14 +18,14 @@ impl super::PawnEnv {
 				return Ok(false);
 			}
 		}
-	}	
+	}
 	#[native(name = "Env_Get")]
 	pub fn get_env(&mut self, _amx: &Amx, env_var: AmxString, dest: UnsizedBuffer, size: usize) -> AmxResult<bool> {
 		match env::var(env_var.to_string()) {
 			Ok(val) => {
-                let mut dest = dest.into_sized_buffer(size+1);
-                let err = samp::cell::string::put_in_buffer(&mut dest, &val);
-                return Ok(err.is_ok());
+				let mut dest = dest.into_sized_buffer(size+1);
+				let err = samp::cell::string::put_in_buffer(&mut dest, &val);
+				return Ok(err.is_ok());
 			}
 			Err(e) => {
 				error!("Env_Get \"{}\": {}", env_var.to_string(), e);
