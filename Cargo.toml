@@ -9,5 +9,5 @@ name = "pawn_env"
 crate-type = ["cdylib"]
 
 [dependencies]
-samp = {git="https://github.com/ZOTTCE/samp-rs/",branch="async-amx",features = ["async"]}
+samp = {git="https://github.com/ZOTTCE/samp-rs/",branch="potential-fix",features = ["encoding"]}
 dotenv = "0.15.0"
